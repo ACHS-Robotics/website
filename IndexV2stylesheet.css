@@ -1,0 +1,132 @@
+*{
+	 margin:0;
+	 padding:0;
+ }
+ 
+ body{
+	/*background-image: url(image/Mountain1.png);
+	background-size:cover;*/
+ }
+ 
+ nav{
+	position: fixed;
+	 width:100%;
+	 height:60px;
+	 background-color:rgb(255,255,255);
+	 
+ }
+  
+ nav p{
+	margin-left: 150px;
+	 font-family:arial;
+	 color:black;
+	 font-size:24px;
+	 line-height:55px;
+	 float:left;
+	 padding: 0px 20px
+ }
+ 
+nav ul{
+	float:right;
+	margin-right: 150px;
+}
+
+nav ul li{
+	float:left;
+	list-style:none;
+	/*activates position absolute within the list*/
+	position:relative;
+	
+}
+
+/* these are the links */
+nav ul li a {
+	display:block;
+	font-family:arial;
+	color:black;
+	font-size:14px;
+	padding:21px 14px;
+	text-decoration:none;
+	border-bottom: white 0px;
+}
+
+nav ul li a:hover {
+	color:rgb(30,100,250);
+	border-bottom: rgb(30,100,250) solid 4px;
+	/*transition:0.2s;*/
+}
+
+nav ul li ul{
+	display:none;
+	position:absolute;
+	background-color:white;
+	padding:10px;
+	border-radius:0px 0px 4px 4px; 
+}
+nav ul li:hover ul{
+	display:block;
+}
+
+nav ul li ul li {
+	width:180px;
+	border-radius:4px;
+}
+nav ul li ul li a{
+	color:black;
+	display:block;
+	padding:8px 14px;
+	border-bottom: none;
+}
+nav ul li ul li:hover a{
+	color: white;
+	background-color: rgb(200,200,200);
+	/*color:rgb(30,100,255);*/
+	border-bottom: none;
+}
+section{
+	height: 100vh;
+	display:flex;
+	justify-content: center;
+	border: 1px solid black;
+
+    background-size: cover; 
+	background-position: center center; 
+	background-attachment: scroll; 
+}
+
+#robot-background {
+	background-image: linear-gradient(rgba(255,255,255,0),rgba(255,255,255,0)), url("assets/2019bot.jpg");
+	height: 100vh;
+	display:flex;
+	justify-content: center;
+	/* border: 1px solid black; dont know if I want this*/
+
+    background-size: cover; 
+    background-position: center center; 
+	background-attachment: scroll; 
+}
+
+#FIRST {
+	/*background-image: linear-gradient(rgba(255,255,255,0),rgba(255,255,255,0)), url("assets/_firstlogo.png");*/
+}
+#about {
+  
+}
+#contact {
+   
+}
+
+header {
+	display:flex;
+	flex-direction:column;
+	flex-wrap:wrap;
+    top: 0;
+    left: 0;
+	right: 0;
+}
+
+#logo{
+	height:60px; 
+	right:475px; 
+	position:relative;
+}
