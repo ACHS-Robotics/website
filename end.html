@@ -1,0 +1,79 @@
+let bigboi = document.getElementById("bigboi");
+let bigboiimg = document.getElementById("bigboiimg");
+let megaboi = document.getElementById("megaboi");
+let left = document.getElementById("left");
+let right = document.getElementById("right");
+let close = document.getElementById("close");
+let newtab = document.getElementById("newtab");
+let showing=false;
+close_();
+
+
+let file;//image src
+function mediashow(div){
+    div.children[0].style.zIndex=0;
+    bigboiimg.src = div.children[0].src.replace('_square','');
+    bigboiimg.src = div.children[0].src.replace('_thumbs','').replace('_square','');
+    bigboi.style.display='block'
+    megaboi.style.display='block';
+    left.style.display='block'
+    right.style.display='block';
+    close.style.display='block'
+    newtab.style.display='block';
+    showing=true;
+}
+
+document.onkeydown = function(evt) {
+    evt = evt || window.event;
+    if (evt.keyCode == 27) {
+        close_();
+    }
+};
+function prev(){
+    var fn = bigboiimg.src.split('/');
+    var ffn = fn[fn.length-2]+'/'+fn[fn.length-1];
+    var pos = imgsns.indexOf(ffn);
+    if (pos > 0){
+        bigboiimg.src = path+imgsns[pos-1];
+    }
+}
+function next(){
+    var fn = bigboiimg.src.split('/');
+    var ffn = fn[fn.length-2]+'/'+fn[fn.length-1];
+    var pos = imgsns.indexOf(ffn);
+    if (pos < imgs.length-1){
+        bigboiimg.src = path+imgsns[pos+1];
+    }
+}
+function new_tab(){
+    window.open(bigboiimg.src,'_blank');
+}
+function close_(){
+    bigboi.style.display='none'
+    megaboi.style.display='none';
+    left.style.display='none'
+    right.style.display='none';
+    close.style.display='none'
+    newtab.style.display='none';
+    showing=false;
+}
+megaboi.onclick = function(e){
+    if (showing && e.target != bigboi && e.target != left && e.target != right && e.target != newtab && e.target != close){
+      close_();
+    }
+  }
+document.onkeydown = function(e) {
+  if(showing){
+    if(e.key === "Escape") {
+        close_();
+    }
+    if(e.key === "ArrowRight"){
+        next();
+    }
+    if(e.key === "ArrowLeft"){
+        prev();
+    }
+  }
+}
+</script>
+</body></html>
