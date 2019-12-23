@@ -1,6 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,600');
+
 *{
 	 margin:0;
-	 padding:0;
  }
  
  body{
@@ -11,24 +12,36 @@
  nav{
 	position: fixed;
 	 width:100%;
-	 height:60px;
-	 background-color:rgb(255,255,255);
-	 
+	 height:4.28em;
+	 /*height:60px*/
+	 background-color:rgb(250,250,250);
  }
   
  nav p{
-	margin-left: 150px;
+	margin-left: 7em;
+	/*margin-left:150px;*/
 	 font-family:arial;
 	 color:black;
 	 font-size:24px;
-	 line-height:55px;
+	 line-height:2.5em;
+	 /*line-height:55px;*/
 	 float:left;
-	 padding: 0px 20px
+	 padding: 0em 1.42em;
+	/* padding: 0px 20px;*/
  }
- 
+ #name{
+	text-decoration: none;
+	color:rgb(88, 97, 204);
+	font-weight: 500;
+ }
+ #name:hover{
+	 color:rgb(73,82,189);
+ }
+
 nav ul{
 	float:right;
-	margin-right: 150px;
+	margin-right:7em;
+	/*margin-right: 150px;*/
 }
 
 nav ul li{
@@ -45,14 +58,15 @@ nav ul li a {
 	font-family:arial;
 	color:black;
 	font-size:14px;
-	padding:21px 14px;
+	padding:1.5em 1em;
+	/*padding:21px 14px;*/
 	text-decoration:none;
-	border-bottom: white 0px;
+	border-bottom: white 0em;
 }
 
 nav ul li a:hover {
-	color:rgb(30,100,250);
-	border-bottom: rgb(30,100,250) solid 4px;
+	color:rgb(50,130,250);
+	border-bottom: rgb(88, 97, 204) solid 0.28em;
 	/*transition:0.2s;*/
 }
 
@@ -61,7 +75,7 @@ nav ul li ul{
 	position:absolute;
 	background-color:white;
 	padding:10px;
-	border-radius:0px 0px 4px 4px; 
+	border-radius:0em 0em 0.28em 0.28em; 
 }
 nav ul li:hover ul{
 	display:block;
@@ -69,22 +83,23 @@ nav ul li:hover ul{
 
 nav ul li ul li {
 	width:180px;
-	border-radius:4px;
+	border-radius:0.28em;
 }
 nav ul li ul li a{
 	color:black;
 	display:block;
-	padding:8px 14px;
+	padding: 0.57em 1em;
+	/*padding:8px 14px;*/
 	border-bottom: none;
 }
 nav ul li ul li:hover a{
-	color: white;
-	background-color: rgb(200,200,200);
+	color: rgb(88, 97, 204);
 	/*color:rgb(30,100,255);*/
 	border-bottom: none;
 }
 section{
-	height: 100vh;
+	font-family: 'Roboto', sans-serif;
+	height: 60vh;
 	display:flex;
 	justify-content: center;
 	border: 1px solid black;
@@ -110,11 +125,73 @@ section{
 	/*background-image: linear-gradient(rgba(255,255,255,0),rgba(255,255,255,0)), url("assets/_firstlogo.png");*/
 }
 #about {
-  
+  background-color:rgb(88, 97, 204);
 }
+.about-container{
+	padding-top:50px;
+}
+.about-container h{
+	font-size: 75px;
+	font-weight:900;
+	color:white;
+}
+.about-container p{
+	color:white;
+	font-size:22px;
+	padding: 75px 300px 50px 300px;
+	text-align: justify;
+}
+
+.about-horiz-line{
+	width: 20em;
+	border: 2px solid white;
+	height: 0px;
+	margin: 0 auto;
+}
+.first-container{
+	padding-top:50px;
+}
+.first-container h{
+	font-size: 75px;
+	font-weight:900;
+	color:black;
+}
+.first-container p{
+	color:black;
+	font-size:22px;
+	padding: 75px 300px 50px 300px;
+	text-align: justify;
+}
+.first-horiz-line{
+	width: 10em;
+	border: 2px solid black;
+	height: 0px;
+	margin: 0 auto;
+}
+
 #contact {
    
 }
+/* I stole these buttons...and go figure they don't use px so they are more scalable*/
+a.button1{
+	display:inline-block;
+	padding:0.35em 1.2em;
+	border:0.1em solid black;
+	margin:0 0.3em 0.3em 0;
+	border-radius:0.12em;
+	box-sizing: border-box;
+	text-decoration:none;
+	font-family:'Roboto',sans-serif;
+	font-size:20px;
+	font-weight:500;
+	color:black;
+	text-align:center;
+	transition: all 0.2s;
+	}
+a.button1:hover{
+	color:rgb(88, 97, 204);
+	border:0.1em solid rgb(88, 97, 204);
+	}
 
 header {
 	display:flex;
