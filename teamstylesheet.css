@@ -8,7 +8,6 @@
 	/*background-image: url(image/Mountain1.png);
 	background-size:cover;*/
  }
- /*top menu begins here*/
  header {
 	display:flex;
 	flex-direction:column;
@@ -17,6 +16,7 @@
     left: 0;
 	right: 0;
 }
+
 
  nav{
 	position: fixed;
@@ -56,14 +56,16 @@ nav ul{
 	margin-right:7em;
 	/*margin-right: 150px;*/
 }
+
 nav ul li{
 	float:left;
 	list-style:none;
 	/*activates position absolute within the list*/
 	position:relative;
+	
 }
 
-/* these are the links on the dropdown*/
+/* these are the links */
 nav ul li a {
 	display:block;
 	font-family:arial;
@@ -108,7 +110,6 @@ nav ul li ul li:hover a{
 	/*color:rgb(30,100,255);*/
 	border-bottom: none;
 }
-/*top navbar ends here, content begins here*/
 section{
 	font-family: 'Roboto', sans-serif;
 	height: 60vh;
@@ -120,104 +121,6 @@ section{
 	background-position: center center; 
 	background-attachment: scroll; 
 }
-
-#robot-background {
-	background-image: linear-gradient(rgba(255,255,255,0),rgba(255,255,255,0)), url("assets/2019bot.jpg");
-	height: 100vh;
-	display:flex;
-	justify-content: center;
-	/* border: 1px solid black; dont know if I want this*/
-
-    background-size: cover; 
-    background-position: center center; 
-	background-attachment: scroll; 
-}
-
-
-#about {
-  background-color:rgb(88, 97, 204);
-}
-.about-container{
-	padding-top:50px;
-}
-.about-container h{
-	font-size: 75px;
-	font-weight:900;
-	color:white;
-}
-.about-container p{
-	color:white;
-	font-size:22px;
-	padding: 75px 300px 50px 300px;
-	text-align: justify;
-}
-
-.about-horiz-line{
-	width: 20em;
-	border: 2px solid white;
-	height: 0px;
-	margin: 0 auto;
-}
-.first-container{
-	padding-top:50px;
-}
-.first-container h{
-	font-size: 75px;
-	font-weight:900;
-	color:black;
-}
-.first-container p{
-	color:black;
-	font-size:22px;
-	padding: 50px 300px 25px 300px;
-	text-align: justify;
-}
-.first-horiz-line{
-	width: 10em;
-	border: 2px solid black;
-	height: 0px;
-	margin: 0 auto;
-}
-.contact-container{
-	padding-top:50px;
-}
-.contact-container h{
-	font-size: 75px;
-	font-weight:900;
-	color:black;
-}
-.contact-horiz-line{
-	width: 25em;
-	border: 2px solid black;
-	height: 0px;
-	margin: 0 auto;
-}
-.contact-container p{
-	color:black;
-	font-size:22px;
-	padding: 50px 300px 25px 300px;
-	text-align: justify;
-}
-/* I stole these buttons...and go figure they don't use px so they are more scalable*/
-a.button1{
-	display:inline-block;
-	padding:0.35em 1.2em;
-	border:0.1em solid black;
-	margin:0 0.3em 0.3em 0;
-	border-radius:0.12em;
-	box-sizing: border-box;
-	text-decoration:none;
-	font-family:'Roboto',sans-serif;
-	font-size:20px;
-	font-weight:500;
-	color:black;
-	text-align:center;
-	transition: all 0.2s;
-	}
-a.button1:hover{
-	color:rgb(88, 97, 204);
-	border:0.1em solid rgb(88, 97, 204);
-	}
 /*footer stuff begins here*/
 footer{
 	height: 20vh;
@@ -256,5 +159,3 @@ footer{
 .fa-github:hover {
 	color:rgb(240, 215, 77);
 }
-
-
