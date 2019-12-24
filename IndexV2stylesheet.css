@@ -8,6 +8,7 @@
 	/*background-image: url(image/Mountain1.png);
 	background-size:cover;*/
  }
+
  /*top menu begins here*/
  header {
 	display:flex;
@@ -84,7 +85,7 @@ nav ul li a:hover {
 nav ul li ul{
 	display:none;
 	position:absolute;
-	background-color:white;
+	background-color:rgb(250,250,250);
 	padding:10px;
 	border-radius:0em 0em 0.28em 0.28em; 
 }
@@ -100,12 +101,11 @@ nav ul li ul li a{
 	color:black;
 	display:block;
 	padding: 0.57em 1em;
-	/*padding:8px 14px;*/
+	background-color:rgb(250,250,250);
 	border-bottom: none;
 }
 nav ul li ul li:hover a{
 	color: rgb(88, 97, 204);
-	/*color:rgb(30,100,255);*/
 	border-bottom: none;
 }
 /*top navbar ends here, content begins here*/
@@ -124,21 +124,35 @@ section{
 #robot-background {
 	background-image: linear-gradient(rgba(255,255,255,0),rgba(255,255,255,0)), url("assets/2019bot.jpg");
 	height: 100vh;
-	display:flex;
-	justify-content: center;
-	/* border: 1px solid black; dont know if I want this*/
+	align-items: center;
+    justify-content: center;
+    flex-direction: column;
+/* border: 1px solid black; dont know if I want this*/
 
     background-size: cover; 
     background-position: center center; 
 	background-attachment: scroll; 
 }
-
-
+.cam-logo{
+	width:400px;
+	height:400px;
+}
+#cam-logo-picture{
+	opacity: 0;
+	max-width:100%;
+	max-height:100%;
+	object-fit: contain;
+}
 #about {
   background-color:rgb(88, 97, 204);
+  display:flex;
+  justify-content:flex-start;
 }
 .about-container{
+	display:flex;
+	flex-direction:column;
 	padding-top:50px;
+	border: 0px solid black;
 }
 .about-container h{
 	font-size: 75px;
@@ -148,35 +162,63 @@ section{
 .about-container p{
 	color:white;
 	font-size:22px;
-	padding: 75px 300px 50px 300px;
+	padding: 25px 300px 50px 300px;
 	text-align: justify;
 }
-
 .about-horiz-line{
 	width: 20em;
 	border: 2px solid white;
 	height: 0px;
 	margin: 0 auto;
 }
+.about-image{
+	display:flex;
+    justify-content: center;
+    align-items: center;
+	overflow: hidden;
+}
+#regional{
+	object-fit: contain;
+}
+#FIRST{
+	display:flex;
+	justify-content:flex-start;
+}
+.first-image{
+	display:flex;
+    justify-content: center;
+    align-items: center;
+	overflow: hidden;
+}
+#firstlogo1{
+	padding-left:100px;
+	width: 100%;
+	height:100%;
+	object-fit: contain;
+}
 .first-container{
 	padding-top:50px;
+	flex-direction:column;
 }
 .first-container h{
 	font-size: 75px;
 	font-weight:900;
-	color:black;
+	color:rgb(93, 93, 145);
 }
 .first-container p{
-	color:black;
+	color:rgb(93, 93, 145);
 	font-size:22px;
 	padding: 50px 300px 25px 300px;
 	text-align: justify;
 }
 .first-horiz-line{
 	width: 10em;
-	border: 2px solid black;
+	border: 2px solid rgb(93, 93, 145);
 	height: 0px;
 	margin: 0 auto;
+}
+#contact{
+	background-color:rgb(93, 93, 145);
 }
 .contact-container{
 	padding-top:50px;
@@ -184,16 +226,16 @@ section{
 .contact-container h{
 	font-size: 75px;
 	font-weight:900;
-	color:black;
+	color:white;
 }
 .contact-horiz-line{
 	width: 25em;
-	border: 2px solid black;
+	border: 2px solid white;
 	height: 0px;
 	margin: 0 auto;
 }
 .contact-container p{
-	color:black;
+	color:white;
 	font-size:22px;
 	padding: 50px 300px 25px 300px;
 	text-align: justify;
@@ -202,7 +244,7 @@ section{
 a.button1{
 	display:inline-block;
 	padding:0.35em 1.2em;
-	border:0.1em solid black;
+	border:0.1em solid rgb(93, 93, 145);
 	margin:0 0.3em 0.3em 0;
 	border-radius:0.12em;
 	box-sizing: border-box;
@@ -210,7 +252,7 @@ a.button1{
 	font-family:'Roboto',sans-serif;
 	font-size:20px;
 	font-weight:500;
-	color:black;
+	color:rgb(93, 93, 145);
 	text-align:center;
 	transition: all 0.2s;
 	}
@@ -225,6 +267,9 @@ footer{
 	font-size:12px;
 	font-family: 'Roboto', sans-serif;
 }
+.footer-icons{
+
+}
 .footer-left{
 	padding-top:2em;
 	width: 50%;
@@ -233,7 +278,7 @@ footer{
 	font-size:16px;
 }
 .footer-links{
-	width:50%;
+	align-items: center;
 }
 .fab{
 	/*float:right; positioning*/
@@ -257,4 +302,16 @@ footer{
 	color:rgb(240, 215, 77);
 }
 
+.fa-chevron-circle-up{
+	padding:.5em .25em 0em .25em;
+	display:inline-block;
+    position:absolute;
+    right:0;
+	margin-right:3em;
+	color:rgb(44, 201, 146);
+}	
+
+.fa-chevron-circle-up:hover{
+	color:rgb(88, 97, 204);
+}
 

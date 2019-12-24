@@ -5,8 +5,8 @@
  }
  
  body{
-	/*background-image: url(image/Mountain1.png);
-	background-size:cover;*/
+	/*background-image: url(image/Mountain1.png);*/
+	text-align:center;
  }
  header {
 	display:flex;
@@ -86,7 +86,7 @@ nav ul li a:hover {
 nav ul li ul{
 	display:none;
 	position:absolute;
-	background-color:white;
+	background-color:rgb(250,250,250);
 	padding:10px;
 	border-radius:0em 0em 0.28em 0.28em; 
 }
@@ -120,4 +120,79 @@ section{
     background-size: cover; 
 	background-position: center center; 
 	background-attachment: scroll; 
+}
+a.button1{
+	display:inline-block;
+	padding:0.35em 1.2em;
+	border:0.1em solid black;
+	margin:0 0.3em 0.3em 0;
+	border-radius:0.12em;
+	box-sizing: border-box;
+	text-decoration:none;
+	font-family:'Roboto',sans-serif;
+	font-size:20px;
+	font-weight:500;
+	color:black;
+	text-align:center;
+	transition: all 0.2s;
+	}
+a.button1:hover{
+	color:rgb(88, 97, 204);
+	border:0.1em solid rgb(88, 97, 204);
+}
+
+/* footer stuff begins here*/
+footer{
+	height: 20vh;
+	background-color:black;
+	font-size:12px;
+	font-family: 'Roboto', sans-serif;
+}
+.footer-icons{
+
+}
+.footer-left{
+	padding-top:2em;
+	width: 50%;
+	margin:0;
+	color:white;
+	font-size:16px;
+}
+.footer-links{
+	padding-top:2.5em;
+	align-items: center;
+}
+.fab{
+	/*float:right; positioning*/
+	padding:.5em .25em 0em .25em;
+	color: rgb(88, 97, 204);
+}
+
+.fa-facebook:hover {
+	color:rgb(0,172,237);
+}
+.fa-youtube:hover {
+	color:red;
+}
+.fa-twitter:hover{
+	color:rgb(50,190,220);
+}
+.fa-instagram:hover {
+	color:rgb(255,105,180);
+}
+.fa-github:hover {
+	color:rgb(240, 215, 77);
+}
+
+.fa-chevron-circle-up{
+	padding:.5em .25em 0em .25em;
+	display:inline-block;
+	position:absolute;
+	right:0;
+	margin-right:3em;
+	color:rgb(44, 201, 146);
+}	
+
+.fa-chevron-circle-up:hover{
+	color:rgb(88, 97, 204);
 }
