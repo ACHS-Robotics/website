@@ -2,8 +2,10 @@
 
 *{
 	 margin:0;
+ }                      
+
+ .main{
  }
- 
  body{
 	/*background-image: url(image/Mountain1.png);
 	background-size:cover;*/
@@ -20,15 +22,21 @@
 }
 
  nav{
+	/*resizing is frustrating*/
+	min-width:1536px;	
+	max-height:60px;
+	z-index:5;
+	display:flex;
+	justify-content:space-between;
 	position: fixed;
-	 width:100%;
-	 height:4.28em;
-	 /*height:60px*/
-	 background-color:rgb(250,250,250);
+	width:100%;
+	height:4.28em;
+	/*height:60px*/
+	background-color:rgb(250,250,250);
  }
   
  nav p{
-	margin-left: 7em;
+	margin-right: 25em;
 	/*margin-left:150px;*/
 	 font-family:arial;
 	 color:black;
@@ -36,13 +44,29 @@
 	 line-height:2.5em;
 	 /*line-height:55px;*/
 	 float:left;
-	 padding: 0em 1.42em;
+	 padding-right: 1em;
 	/* padding: 0px 20px;*/
  }
+ .navbar-left{
+	 display:flex;
+	 padding-left:1em;
+ }
+.cam-logo{
+	margin-left:3em;
+	width:100px;
+	height:100px;
+}
+#cam-logo-picture{
+	max-width:120%;
+	max-height:120%;
+	position:relative;
+	bottom:1em;
+	}
  #name{
 	text-decoration: none;
 	color:rgb(88, 97, 204);
 	font-weight: 500;
+	font-size:28px;
  }
  #name:hover{
 	 color:rgb(73,82,189);
@@ -51,6 +75,14 @@
 	height:60px; 
 	right:475px; 
 	position:relative;
+}
+.memory-pulldown:hover{
+	cursor: pointer;
+}
+.nav-container{
+}
+.navbar-right{
+	min-width:593.09px;	
 }
 nav ul{
 	float:right;
@@ -73,7 +105,7 @@ nav ul li a {
 	padding:1.5em 1em;
 	/*padding:21px 14px;*/
 	text-decoration:none;
-	border-bottom: white 0em;
+	border-bottom: white 1em;
 }
 
 nav ul li a:hover {
@@ -88,9 +120,6 @@ nav ul li ul{
 	background-color:rgb(250,250,250);
 	padding:10px;
 	border-radius:0em 0em 0.28em 0.28em; 
-}
-nav ul li:hover ul{
-	display:block;
 }
 
 nav ul li ul li {
@@ -118,12 +147,12 @@ section{
 
     background-size: cover; 
 	background-position: center center; 
-	background-attachment: scroll; 
 }
 
 #robot-background {
 	background-image: linear-gradient(rgba(255,255,255,0),rgba(255,255,255,0)), url("assets/2019bot.jpg");
 	height: 100vh;
+	/* center anything using flexbox*/
 	align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -133,15 +162,11 @@ section{
     background-position: center center; 
 	background-attachment: scroll; 
 }
-.cam-logo{
-	width:400px;
-	height:400px;
-}
-#cam-logo-picture{
-	opacity: 0;
-	max-width:100%;
-	max-height:100%;
-	object-fit: contain;
+
+.team-name{
+	color:rgb(240,255,255);
+	font-size:60px;
+	font-family: "Josephin Sans", sans-serif;
 }
 #about {
   background-color:rgb(88, 97, 204);
@@ -162,7 +187,7 @@ section{
 .about-container p{
 	color:white;
 	font-size:22px;
-	padding: 25px 300px 50px 300px;
+	padding: 25px 200px 50px 200px;
 	text-align: justify;
 }
 .about-horiz-line{
@@ -188,7 +213,6 @@ section{
 	display:flex;
     justify-content: center;
     align-items: center;
-	overflow: hidden;
 }
 #firstlogo1{
 	padding-left:100px;
@@ -197,7 +221,7 @@ section{
 	object-fit: contain;
 }
 .first-container{
-	padding-top:50px;
+	padding-top:30px;
 	flex-direction:column;
 }
 .first-container h{
@@ -208,7 +232,7 @@ section{
 .first-container p{
 	color:rgb(93, 93, 145);
 	font-size:22px;
-	padding: 50px 300px 25px 300px;
+	padding: 50px 200px 25px 200px;
 	text-align: justify;
 }
 .first-horiz-line{
@@ -308,7 +332,7 @@ footer{
     position:absolute;
     right:0;
 	margin-right:3em;
-	color:rgb(44, 201, 146);
+	color:rgb(230,230,255);
 }	
 
 .fa-chevron-circle-up:hover{
