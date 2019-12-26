@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "scss": "node-sass scss/Teamstylesheet.scss css/Teamstylesheet.css"
+    "scss-2020": "node-sass scss/2020Stylesheet.scss css/2020Stylesheet.css",
+    "scss-team": "node-sass scss/Teamstylesheet.scss css/Teamstylesheet.css",
+    "scss-index": "node-sass scss/IndexV2stylesheet.scss css/IndexV2stylesheet.css",
+    "scss-header": "node-sass scss/headerAndFooter.scss css/headerAndFooter.css"
   },
   "author": "",
   "license": "ISC",

@@ -3,26 +3,26 @@ tl.from("#robot-background",{
     webkitFilter: 'blur(6px)',filter: 'blur(6px)',duration: 4
 });
 var tween1=gsap.from(".about-container", {
-    opacity:0, y:200, duration: 1, ease: "power1" 
+    opacity:0, x:-200, duration: 1, ease: "power1" 
 });
 var tween2=gsap.from(".first-container", {
-    opacity:0, x:-200, duration: 1, ease: "power1" 
+    opacity:0, x:200, duration: 1, ease: "power1" 
 });
 var controller=new ScrollMagic.Controller();
 var scene=new ScrollMagic.Scene({
       triggerElement:".about-container",
-      triggerHook: 1
+      triggerHook: 1,
+      reverse:false
    })
   .setTween(tween1)
-  .addIndicators()
   .addTo(controller);
 
 var scene=new ScrollMagic.Scene({
     triggerElement:".first-container",
-    triggerHook: 0.5
+    triggerHook: 0.5,
+    reverse:false
  })
 .setTween(tween2)
-.addIndicators()
 .addTo(controller);
 /*function that pulls down the dropdown*/
 var dropdown=gsap.timeline();
