@@ -1,110 +1,52 @@
 <!DOCTYPE HTML>
-<html lang="en">
+<html lang="en" style="scroll-behavior:smooth">
 <head>
     <meta charset="UTF-8">
   <title>ACHSRobotics</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href=teamstylesheet.css>
+    <link rel="stylesheet" href=css/Teamstylesheet.css>
+    <script src="https://kit.fontawesome.com/16c4754272.js" crossorigin="anonymous"></script>
 <style>
-
-
-img {
-    width:100%;
-    border-radius:0px;
-    transition: 0.25s;    
-}
-img:hover{
-    transition: border-radius ease 0.25s;
-    border-radius:0px;
-    transform: scale(1.0);
-}
-
-body{height:100%;
-   width:100%;
-   background-image:url(idk);
-   background-repeat:no-repeat;
-   background-size:cover;
-}
-div.pcontainer{
-    width:100%;
-    height:1px;
-    float:left;
-    text-align: center;
-  padding: 10px 20px;
-  font-size:200%;}
-div.person {
-  font-family:Lucida Sans Unicode, Lucida Grande, sans-serif;
-  width: 16%;
-  background-color: #eee;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  margin:2%;
-  float: left;
-  transition: 0.25s;
-  text-decoration: none;
-  color: rgb(0, 41, 55);
-}
-div.person:hover{
-    background-color: #192020;
-    color:#fff;
-    transform:scale(1.1);
-}
-div.name {
-  text-align: center;
-  padding: 10px 20px;
-  font-size:200%;
-}
-div.about {
-  text-align: center;
-  padding: 10px 20px;
-  font-size:100%;
-}
-div.team {
-  text-align: center;
-  padding: 10px 20px;
-  font-size:150%;
-}
-div.popup{
-  width:30%;
-  position:fixed;
-  left:35%;
-  background-color:#fff;
-  color:#192020;
-  overflow-y: scroll;
-  max-height: 100%;
-  display:none;
-  z-index:1000;
-}
-div.grayout{
-  top:-10%;
-  width:1000%;
-  position:fixed;
-  left:-10%;
-  display:none;
-  z-index:500;
-}
 </style>
 
 </head>
 
 <body>
   <header>
-      <nav style="z-index:5000;"> 
-          <p><a href="IndexV2.html"id="name"><i>TEAM 6934</i></a></p>
-      <ul>
-          <li><a href="2020.html"><i>THE CHALLENGE</i></a></li>
-          <li><a href="team.html"> <i>THE TEAM</i></a></li>
-          <li><a href="#"> <i>MEMORIES</i></a>
-              <ul>
-                  <li><a href="gallery2019.html"> <i>2019 Season</i></a></li>
-                  <li><a href="gallery2020.html"> <i>2020 Season</i></a></li>
-              </ul>
-          </li>
-          <li><a href="#"><i>SPONSORS</i></a></li>
-      </ul>
-  </nav>
+    <div class="spacer">
+        <nav> 
+            <!--<img src="assets/scorps-techv2.png" id="logo"> -->
+            <div class="navbar-left">
+                <div class="cam-logo">
+                    <img src="assets/ACHS-Logo-Circle-Final.png" id="cam-logo-picture">
+                </div>
+                <p><a href="IndexV2.html" id="name"><i>SCORPS</i></a></p>
+            </div>                  
+            <div class="nav-container">
+                    <ul class="navbar-right">
+                        <li><a href="2020.html"><i>THE CHALLENGE</i></a></li>
+                        <li><a href="team.html"> <i>THE TEAM</i></a></li>
+                        <li>
+                            <div class="memory-pulldown">
+                            <a> 
+                            <i>MEMORIES</i>
+                            <i class="fas fa-chevron-down"></i>
+                            </a>
+                            </div>
+                            <ul>
+                                <li><a href="gallery2019.html"> <i>2019 Season</i></a></li>
+                                <li><a href="gallery2020.html"> <i>2020 Season</i></a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><i>SPONSORS</i></a></li>
+                    </ul>
+            </div>
+        </nav>
+    </div>
+      
   </header>
-
+<main>
   <div class=grayout id=grayout>
     <img src="team/tl80.png">
   </div>
@@ -114,20 +56,21 @@ div.grayout{
     <div class=team></div>
     <div class=about></div>
 </div>
-
-  <div class=pcontainer>Faculty and Mentors</div><!-- pcontainer is what I use for heading the different sections-->
-<!-- you need an empty pcontainer div every 5 people so that if their text was different lengths the pcontainer makes all 5 of the next people start at the same height.-->
-    <div class=person onclick="show(this)"><img src="team/jjackson.JPG">
-        <div class=name>Jeff Jackson</div>
-        <div class=about>I teach computer science and robotics and like surfing.</div>
-    </div>
-
-
+<section>
+    <div class=pcontainer>Faculty and Mentors</div><!-- pcontainer is what I use for heading the different sections-->
+    <!-- you need an empty pcontainer div every 5 people so that if their text was different lengths the pcontainer makes all 5 of the next people start at the same height.-->
+        <div class=person onclick="show(this)"><img src="team/jjackson.JPG">
+            <div class=name>Jeff Jackson</div>
+            <div class=about>I teach computer science and robotics and like surfing.</div>
+        </div>
+</section>
+ 
+<section>
   <div class=pcontainer>Current Members</div>
     <div class=person onclick="show(this)"><img src="team/Huy.jpg">
         <div class=name>Huy Nguyen</div>
         <div class=team>Programming</div>
-        <div class=about>I am a senior, and am the co-president of the club. This is my third year on the team.</div>
+        <div class=about >I am a senior, and am the co-president of the club. This is my third year on the team.</div>
     </div>
 
     <div class=person onclick="show(this)"><img src="team/Trev.JPG">
@@ -153,8 +96,8 @@ div.grayout{
         <div class=team>Programming</div>
         <div class=about>Calcy, take it!</div>
     </div>
-
-
+</section>
+<section>
     <div class=pcontainer></div>
 
     <div class=person onclick="show(this)"><img src="team/katelynr.jpg">
@@ -186,88 +129,33 @@ div.grayout{
         <div class=team>Teams</div>
         <div class=about>about</div>
     </div>
-
-
+</section>
+<section>
     <div class=pcontainer></div>
-
-
   <div class=pcontainer>Graduates</div>
     <div class=person onclick="show(this)"><img src="team/PHOTO.jpg">
         <div class=name>Name McName</div>
         <div class=about>Joined 2017<br />Graduated 2019</div>
     </div>
-
-<script>
- if( navigator.userAgent.match(/Android/i)
- || navigator.userAgent.match(/webOS/i)
- || navigator.userAgent.match(/iPhone/i)
- || navigator.userAgent.match(/iPad/i)
- || navigator.userAgent.match(/iPod/i)
- || navigator.userAgent.match(/BlackBerry/i)
- || navigator.userAgent.match(/Windows Phone/i)
- ){location.href="team_mobile.html"}
-
-    let gray=document.getElementById('grayout');
-    let card=document.getElementById('maincard');
-    let c_img,c_name,c_team,c_about;
-    let card_visible=false;
-    card_c = card.children;
-    for(var i = 0; i < card_c.length; i++) {
-      if(card_c[i].tagName=='IMG'){
-        c_img=card_c[i];
-      }
-      if(card_c[i].className == 'name') {
-        c_name=card_c[i];
-      }
-      if(card_c[i].className == 'team') {
-        c_team=card_c[i];
-      }
-      if(card_c[i].className == 'about') {
-        c_about=card_c[i];
-      }
-    }
-
-  function show(div){
-    div.style.zIndex=-1;
-    c = div.children;
-    gray.style.display='block'
-    card.style.display='block';
-    card_visible=true;
-    c_name.innerHTML='';
-    c_team.innerHTML='';
-    c_img.src='';
-    c_about.innerHTML='';
-    for(var i = 0; i < c.length; i++) {
-      if(c[i].tagName=='IMG'){
-        c_img.src=c[i].src.replace('team/','team/in/');
-      }
-      if(c[i].className == 'name') {
-          c_name.innerHTML=c[i].innerHTML;
-      }
-      if(c[i].className == 'team') {
-        c_team.innerHTML=c[i].innerHTML;
-      }
-      if(c[i].className == 'about') {
-        c_about.innerHTML=c[i].innerHTML;
-      }
-    }
-  }
-
-  gray.onclick = function(e){
-    if (card_visible && e.target != card){
-      gray.style.display='none';
-      card.style.display='none';
-    }
-  }
-
-  document.onkeydown = function(e) {
-    if(e.key === "Escape") {
-      gray.style.display='none';
-      card.style.display='none';
-    }
-  }
-</script>
-
+  </section>
+</main>
+<footer>
+    <div class="footer-links">
+        <div class="footer-icons">
+               <!-- <a href="#" target="_blank" rel="noopener"><i class="fab fa-facebook fa-3x"></i></a>-->
+                <a href="#" target="_blank" rel="noopener"><i class="fab fa-twitter fa-3x"></i></a>
+                <a href="#" target="_blank" rel="noopener"><i class="fab fa-instagram fa-3x" aria-hidden="true"></i></a>
+                <a href="#" target="_blank" rel="noopener"><i class="fab fa-youtube fa-3x"></i></a>
+                <a href="https://github.com/Scorps6934" target="_blank" rel="noopener"><i class="fab fa-github fa-3x"></i></a>
+                <a href="#" ><i class="fas fa-chevron-circle-up fa-3x"></i></a>
+            </div>
+    </div>
+</footer> 
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.2/gsap.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
+            <script src="TeamPage.js"></script>                                                 
 </body>
 <!-- this code is Dakota™ certified to be at least 90% spaghetti.-->
 </html>

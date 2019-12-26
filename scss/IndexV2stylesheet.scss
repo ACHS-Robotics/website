@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,600');
+$primary-blue: rgb(88, 97, 204);
+*{
+	 margin:0;
+ }                      
+ /*top menu begins here*/
+ header {
+	display:flex;
+	flex-direction:column;
+	flex-wrap:wrap;
+    top: 0;
+    left: 0;
+	right: 0;
+}
+/*test*/
+ nav{
+	/*resizing is frustrating*/
+	min-width:1536px;	
+	max-height:60px;
+	z-index:5;
+	display:flex;
+	justify-content:space-between;
+	position: fixed;
+	width:100%;
+	height:4.28em;
+	/*height:60px*/
+	background-color:rgb(250,250,250);
+ }
+  
+ nav p{
+	margin-right: 25em;
+	/*margin-left:150px;*/
+	 font-family:arial;
+	 color:black;
+	 font-size:24px;
+	 line-height:2.5em;
+	 /*line-height:55px;*/
+	 float:left;
+	 padding-right: 1em;
+	/* padding: 0px 20px;*/
+ }
+ .navbar-left{
+	 display:flex;
+	 padding-left:1em;
+ }
+.cam-logo{
+	margin-left:3em;
+	width:100px;
+	height:100px;
+}
+#cam-logo-picture{
+	max-width:120%;
+	max-height:120%;
+	position:relative;
+	bottom:1em;
+	}
+ #name{
+	text-decoration: none;
+	color:$primary-blue;
+	font-weight: 500;
+	font-size:28px;
+ }
+ #name:hover{
+	 color:rgb(73,82,189);
+ }
+ #logo{
+	height:60px; 
+	right:475px; 
+	position:relative;
+}
+.memory-pulldown:hover{
+	cursor: pointer;
+}
+
+.navbar-right{
+	min-width:593.09px;	
+}
+nav ul{
+	float:right;
+	margin-right:7em;
+	/*margin-right: 150px;*/
+}
+nav ul li{
+	float:left;
+	list-style:none;
+	/*activates position absolute within the list*/
+	position:relative;
+}
+
+/* these are the links on the dropdown*/
+nav ul li a {
+	display:block;
+	font-family:arial;
+	color:black;
+	font-size:14px;
+	padding:1.5em 1em;
+	/*padding:21px 14px;*/
+	text-decoration:none;
+	border-bottom: white 1em;
+}
+
+nav ul li a:hover {
+	color:rgb(50,130,250);
+	border-bottom: $primary-blue solid 0.28em;
+	/*transition:0.2s;*/
+}
+
+nav ul li ul{
+	display:none;
+	position:absolute;
+	background-color:rgb(250,250,250);
+	padding:10px;
+	border-radius:0em 0em 0.28em 0.28em; 
+}
+
+nav ul li ul li {
+	width:180px;
+	border-radius:0.28em;
+}
+nav ul li ul li a{
+	color:black;
+	display:block;
+	padding: 0.57em 1em;
+	background-color:rgb(250,250,250);
+	border-bottom: none;
+}
+nav ul li ul li:hover a{
+	color: $primary-blue;
+	border-bottom: none;
+}
+/*top navbar ends here, content begins here*/
+section{
+	font-family: 'Roboto', sans-serif;
+	height: 60vh;
+	display:flex;
+	justify-content: center;
+	border: 1px solid black;
+
+    background-size: cover; 
+	background-position: center center; 
+}
+
+#robot-background {
+	background-image: linear-gradient(rgba(255,255,255,0),rgba(255,255,255,0)), url("../assets/2019bot.jpg");
+	height: 100vh;
+	/* center anything using flexbox*/
+	align-items: center;
+    justify-content: center;
+    flex-direction: column;
+/* border: 1px solid black; dont know if I want this*/
+
+    background-size: cover; 
+    background-position: center center; 
+	background-attachment: scroll; 
+}
+
+.team-name{
+	color:rgb(240,255,255);
+	font-size:60px;
+	font-family: "Josephin Sans", sans-serif;
+}
+#about {
+  background-color:$primary-blue;
+  display:flex;
+  justify-content:flex-start;
+}
+.about-container{
+	display:flex;
+	flex-direction:column;
+	padding-top:50px;
+	border: 0px solid black;
+}
+.about-container h{
+	font-size: 75px;
+	font-weight:900;
+	color:white;
+}
+.about-container p{
+	color:white;
+	font-size:22px;
+	padding: 25px 200px 50px 200px;
+	text-align: justify;
+}
+.about-horiz-line{
+	width: 20em;
+	border: 2px solid white;
+	height: 0px;
+	margin: 0 auto;
+}
+.about-image{
+	display:flex;
+    justify-content: center;
+    align-items: center;
+	overflow: hidden;
+}
+#regional{
+	object-fit: contain;
+}
+#FIRST{
+	display:flex;
+	justify-content:flex-start;
+}
+.first-image{
+	display:flex;
+    justify-content: center;
+    align-items: center;
+}
+#firstlogo1{
+	padding-left:100px;
+	width: 100%;
+	height:100%;
+	object-fit: contain;
+}
+.first-container{
+	padding-top:30px;
+	flex-direction:column;
+}
+.first-container h{
+	font-size: 75px;
+	font-weight:900;
+	color:rgb(93, 93, 145);
+}
+.first-container p{
+	color:rgb(93, 93, 145);
+	font-size:22px;
+	padding: 50px 200px 25px 200px;
+	text-align: justify;
+}
+.first-horiz-line{
+	width: 10em;
+	border: 2px solid rgb(93, 93, 145);
+	height: 0px;
+	margin: 0 auto;
+}
+#contact{
+	background-color:rgb(93, 93, 145);
+}
+.contact-container{
+	padding-top:50px;
+}
+.contact-container h{
+	font-size: 75px;
+	font-weight:900;
+	color:white;
+}
+.contact-horiz-line{
+	width: 25em;
+	border: 2px solid white;
+	height: 0px;
+	margin: 0 auto;
+}
+.contact-container p{
+	color:white;
+	font-size:22px;
+	padding: 50px 300px 25px 300px;
+	text-align: justify;
+}
+/* I stole these buttons...and go figure they don't use px so they are more scalable*/
+a.button1{
+	display:inline-block;
+	padding:0.35em 1.2em;
+	border:0.1em solid rgb(93, 93, 145);
+	margin:0 0.3em 0.3em 0;
+	border-radius:0.12em;
+	box-sizing: border-box;
+	text-decoration:none;
+	font-family:'Roboto',sans-serif;
+	font-size:20px;
+	font-weight:500;
+	color:rgb(93, 93, 145);
+	text-align:center;
+	transition: all 0.2s;
+	}
+a.button1:hover{
+	color:$primary-blue;
+	border:0.1em solid $primary-blue;
+	}
+/*footer stuff begins here*/
+footer{
+	height: 20vh;
+	background-color:black;
+	font-size:12px;
+	font-family: 'Roboto', sans-serif;
+}
+
+.footer-left{
+	padding-top:2em;
+	width: 50%;
+	margin:0;
+	color:white;
+	font-size:16px;
+}
+.footer-links{
+	align-items: center;
+}
+.fab{
+	/*float:right; positioning*/
+	padding:.5em .25em 0em .25em;
+	color: $primary-blue;
+}
+
+.fa-facebook:hover {
+	color:rgb(0,172,237);
+}
+.fa-youtube:hover {
+	color:red;
+}
+.fa-twitter:hover{
+	color:rgb(50,190,220);
+}
+.fa-instagram:hover {
+	color:rgb(255,105,180);
+}
+.fa-github:hover {
+	color:rgb(240, 215, 77);
+}
+
+.fa-chevron-circle-up{
+	padding:.5em .25em 0em .25em;
+	display:inline-block;
+    position:absolute;
+    right:0;
+	margin-right:3em;
+	color:rgb(230,230,255);
+}	
+.fa-chevron-circle-up:hover{
+	color:$primary-blue;
+}
+

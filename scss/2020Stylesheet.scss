@@ -1,0 +1,14 @@
+/*the at import call will be deprecated eventually, but I'm using node-sass, so for now I guess use @import*/
+
+@import 'scss/headerAndFooter.scss';
+
+section{
+	font-family: 'Roboto', sans-serif;
+	height: 60vh;
+	display:flex;
+	justify-content: center;
+	border: 1px solid black;
+
+    background-size: cover; 
+	background-position: center center; 
+}
