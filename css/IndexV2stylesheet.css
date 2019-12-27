@@ -1,16 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,600");
+@import url("https://fonts.googleapis.com/css?family=Major+Mono+Display");
+@import url("https://fonts.googleapis.com/css?family=Major+Mono+Display");
 * {
   margin: 0; }
 
-/*
- .main{
-	 
- }
- body{
-	background-image: url(image/Mountain1.png);
-	background-size:cover;
- }*/
-/*top menu begins here*/
+body {
+  text-align: center; }
+
 header {
   display: flex;
   flex-direction: column;
@@ -60,6 +56,8 @@ nav p {
   bottom: 1em; }
 
 #name {
+  font-family: 'Major Mono Display', monospace;
+  font-weight: 900;
   text-decoration: none;
   color: #5861cc;
   font-weight: 500;
@@ -128,6 +126,57 @@ nav ul li ul li:hover a {
   color: #5861cc;
   border-bottom: none; }
 
+/*footer stuff begins here*/
+footer {
+  height: 20vh;
+  background-color: black;
+  font-size: 12px;
+  font-family: 'Roboto', sans-serif; }
+
+.footer-left {
+  padding-top: 2em;
+  width: 50%;
+  margin: 0;
+  color: white;
+  font-size: 16px; }
+
+.footer-links {
+  align-items: center; }
+
+.fab {
+  /*float:right; positioning*/
+  padding: .5em .25em 0em .25em;
+  color: #5861cc; }
+
+.fa-facebook:hover {
+  color: #00aced; }
+
+.fa-youtube:hover {
+  color: red; }
+
+.fa-twitter:hover {
+  color: #32bedc; }
+
+.fa-instagram:hover {
+  color: hotpink; }
+
+.fa-github:hover {
+  color: #f0d74d; }
+
+.fa-chevron-circle-up {
+  padding: .5em .25em 0em .25em;
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  margin-right: 3em;
+  color: #e6e6ff; }
+
+.fa-chevron-circle-up:hover {
+  color: #5861cc; }
+
+* {
+  margin: 0; }
+
 /*top navbar ends here, content begins here*/
 section {
   font-family: 'Roboto', sans-serif;
@@ -138,20 +187,22 @@ section {
   background-size: cover;
   background-position: center center; }
 
-#robot-background {
-  background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url("../assets/2019bot.jpg");
+.parallax {
   height: 100vh;
-  /* center anything using flexbox*/
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+#robot-background {
+  display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
-  /* border: 1px solid black; dont know if I want this*/
-  background-size: cover;
-  background-position: center center;
-  background-attachment: scroll; }
+  height: 100vh;
+  background: url("../assets/2019bot.jpg");
+  background-size: cover; }
 
 .team-name {
-  color: azure;
+  color: #fafafa;
   font-size: 60px;
   font-family: "Josephin Sans", sans-serif; }
 
@@ -174,7 +225,7 @@ section {
 .about-container p {
   color: white;
   font-size: 22px;
-  padding: 25px 200px 50px 200px;
+  margin: 25px 200px 50px 200px;
   text-align: justify; }
 
 .about-horiz-line {
@@ -219,7 +270,7 @@ section {
 .first-container p {
   color: #5d5d91;
   font-size: 22px;
-  padding: 50px 200px 25px 200px;
+  margin: 50px 200px 25px 200px;
   text-align: justify; }
 
 .first-horiz-line {
@@ -270,51 +321,3 @@ a.button1 {
 a.button1:hover {
   color: #5861cc;
   border: 0.1em solid #5861cc; }
-
-/*footer stuff begins here*/
-footer {
-  height: 20vh;
-  background-color: black;
-  font-size: 12px;
-  font-family: 'Roboto', sans-serif; }
-
-.footer-left {
-  padding-top: 2em;
-  width: 50%;
-  margin: 0;
-  color: white;
-  font-size: 16px; }
-
-.footer-links {
-  align-items: center; }
-
-.fab {
-  /*float:right; positioning*/
-  padding: .5em .25em 0em .25em;
-  color: #5861cc; }
-
-.fa-facebook:hover {
-  color: #00aced; }
-
-.fa-youtube:hover {
-  color: red; }
-
-.fa-twitter:hover {
-  color: #32bedc; }
-
-.fa-instagram:hover {
-  color: hotpink; }
-
-.fa-github:hover {
-  color: #f0d74d; }
-
-.fa-chevron-circle-up {
-  padding: .5em .25em 0em .25em;
-  display: inline-block;
-  position: absolute;
-  right: 0;
-  margin-right: 3em;
-  color: #e6e6ff; }
-
-.fa-chevron-circle-up:hover {
-  color: #5861cc; }

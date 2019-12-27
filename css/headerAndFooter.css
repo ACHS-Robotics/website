@@ -1,3 +1,10 @@
+@import url("https://fonts.googleapis.com/css?family=Major+Mono+Display");
+* {
+  margin: 0; }
+
+body {
+  text-align: center; }
+
 header {
   display: flex;
   flex-direction: column;
@@ -47,6 +54,8 @@ nav p {
   bottom: 1em; }
 
 #name {
+  font-family: 'Major Mono Display', monospace;
+  font-weight: 900;
   text-decoration: none;
   color: #5861cc;
   font-weight: 500;
