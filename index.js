@@ -1,17 +1,31 @@
 var tl=gsap.timeline(); 
 tl.from("#robot-background",{
-    webkitFilter: 'blur(6px)',filter: 'blur(6px)',duration: 4
+    webkitFilter: 'blur(6px)', filter: 'blur(6px)', duration: 2
 });
-var tween1=gsap.from(".about-container", {
-    opacity:0, x:-200, duration: 1, ease: "power1" 
+tl.from(".team-name",{
+    duration: 2, y:30, ease:"power1"
+},"-=2");
+var tween1=gsap.timeline();
+tween1.from(".about-horiz-line", {
+    opacity:0, x:-100, duration: 1, ease: "power1" 
 });
-var tween2=gsap.from(".first-container", {
-    opacity:0, x:200, duration: 1, ease: "power1" 
+tween1.from(".about-container p", {
+    opacity:0, x:-100, duration: 1, ease: "power1" 
+},"-=.5");
+var tween2=gsap.timeline();
+tween2.from(".first-horiz-line", {
+    opacity:0, x:100, duration: 1, ease: "power1" 
 });
+tween2.from(".first-container p", {
+    opacity:0, x:100, duration: 1, ease: "power1" 
+},"-=.5");
+tween2.from(".button1", {
+    opacity:0, x:100, duration: 1, ease: "power1" 
+},"-=.5");
 var controller=new ScrollMagic.Controller();
 var scene=new ScrollMagic.Scene({
       triggerElement:".about-container",
-      triggerHook: 1,
+      triggerHook: 0.75,
       reverse:false
    })
   .setTween(tween1)
@@ -19,11 +33,13 @@ var scene=new ScrollMagic.Scene({
 
 var scene=new ScrollMagic.Scene({
     triggerElement:".first-container",
-    triggerHook: 0.5,
+    triggerHook: 1,
     reverse:false
  })
 .setTween(tween2)
 .addTo(controller);
+
+
 /*function that pulls down the dropdown*/
 var dropdown=gsap.timeline();
 dropdown.paused(true);
@@ -62,5 +78,4 @@ navbarRight.addEventListener("click",(e)=>{
     }
     toggleNavbarRight();
     extendedDown=!extendedDown;
-    console.log("var is " + extendedDown);
 });

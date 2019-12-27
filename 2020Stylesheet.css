@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto:400,600");
+/*the at import call will be deprecated eventually, but I'm using node-sass, so for now I guess use @import*/
 @import url("https://fonts.googleapis.com/css?family=Major+Mono+Display");
 @import url("https://fonts.googleapis.com/css?family=Major+Mono+Display");
 * {
@@ -57,7 +57,7 @@ nav p {
 
 #name {
   font-family: 'Major Mono Display', monospace;
-  font-weight: 900;
+  font-weight: 1400;
   text-decoration: none;
   color: #5861cc;
   font-weight: 500;
@@ -174,150 +174,98 @@ footer {
 .fa-chevron-circle-up:hover {
   color: #5861cc; }
 
-* {
-  margin: 0; }
-
-/*top navbar ends here, content begins here*/
 section {
   font-family: 'Roboto', sans-serif;
   height: 60vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  border: 1px solid black;
+  align-items: center;
   background-size: cover;
   background-position: center center; }
 
-.parallax {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center; }
-
-#robot-background {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  background: url("../assets/2019bot.jpg");
-  background-size: cover; }
-
-.team-name {
-  color: #fafafa;
-  font-size: 60px;
-  font-family: "Josephin Sans", sans-serif; }
-
-#about {
-  background-color: #5861cc;
-  display: flex;
-  justify-content: flex-start; }
-
-.about-container {
+.learn-more {
+  font-family: 'Roboto', sans-serif;
+  height: 40vh;
   display: flex;
   flex-direction: column;
-  padding-top: 50px;
-  border: 0px solid black; }
-
-.about-container h {
-  font-size: 75px;
-  font-weight: 900;
-  color: white; }
-
-.about-container p {
-  color: white;
-  font-size: 22px;
-  margin: 25px 200px 50px 200px;
-  text-align: justify; }
-
-.about-horiz-line {
-  width: 20em;
-  border: 2px solid white;
-  height: 0px;
-  margin: 0 auto; }
-
-.about-image {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden; }
-
-#regional {
-  object-fit: contain; }
-
-#FIRST {
-  display: flex;
-  justify-content: flex-start; }
-
-.first-image {
-  display: flex;
   justify-content: center;
   align-items: center; }
 
-#firstlogo1 {
-  padding-left: 100px;
-  width: 100%;
-  height: 100%;
-  object-fit: contain; }
+.text {
+  width: 30em;
+  font-size: 24px;
+  margin-bottom: 1em; }
 
-.first-container {
-  padding-top: 30px;
-  flex-direction: column; }
-
-.first-container h {
-  font-size: 75px;
-  font-weight: 900;
-  color: #5d5d91; }
-
-.first-container p {
-  color: #5d5d91;
-  font-size: 22px;
-  margin: 50px 200px 25px 200px;
-  text-align: justify; }
-
-.first-horiz-line {
-  width: 10em;
-  border: 2px solid #5d5d91;
-  height: 0px;
-  margin: 0 auto; }
-
-#contact {
-  background-color: #5d5d91; }
-
-.contact-container {
-  padding-top: 50px; }
-
-.contact-container h {
-  font-size: 75px;
-  font-weight: 900;
-  color: white; }
-
-.contact-horiz-line {
-  width: 25em;
-  border: 2px solid white;
-  height: 0px;
-  margin: 0 auto; }
-
-.contact-container p {
-  color: white;
-  font-size: 22px;
-  padding: 50px 300px 25px 300px;
-  text-align: justify; }
-
-/* I stole these buttons...and go figure they don't use px so they are more scalable*/
 a.button1 {
   display: inline-block;
   padding: 0.35em 1.2em;
-  border: 0.1em solid #5d5d91;
+  border: 0.05em solid #e6e6dc;
   margin: 0 0.3em 0.3em 0;
   border-radius: 0.12em;
   box-sizing: border-box;
   text-decoration: none;
-  font-family: 'Roboto',sans-serif;
+  font-family: 'Major Mono Display', monospace;
   font-size: 20px;
   font-weight: 500;
-  color: #5d5d91;
+  color: grey;
   text-align: center;
   transition: all 0.2s; }
 
 a.button1:hover {
   color: #5861cc;
-  border: 0.1em solid #5861cc; }
+  border: 0.05em solid #5861cc; }
+
+/*clock stuff, credits to Animated Creativity's Codepen*/
+.holder {
+  position: absolute;
+  background-color: #ffffff;
+  left: 0%;
+  top: 0%;
+  width: 100%;
+  height: 100%; }
+
+.new-year {
+  font-family: 'Major Mono Display', monospace;
+  color: #333333;
+  font-size: 20px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 100%;
+  transform: translateX(-50%) translateY(-50%);
+  text-align: center; }
+
+.year {
+  position: relative;
+  left: 50%;
+  display: table;
+  font-size: 6em;
+  transform: translateX(-50%); }
+
+.year2 {
+  transform: translateX(-50%) rotateX(180deg);
+  opacity: 0.2; }
+
+.digit {
+  display: inline-block;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  opacity: 0; }
+
+.controls {
+  margin-top: 30px; }
+
+.control {
+  display: inline-block;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 0.8em;
+  border-left: 1px solid #333333;
+  opacity: 0;
+  position: relative;
+  top: 100px; }
+
+.control:first-child {
+  border-left: none; }
