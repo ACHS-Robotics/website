@@ -40,12 +40,17 @@ if ($handle = opendir('imgAliases/'.$year)) {
     }
     closedir($handle);
 }
-
-$html .= "<script>\nvar path = \"images/\";//var path = \"gallery".$year."/\";\n".substr($imgslist,0,strlen($imgslist)-1)."];\n".substr($imgslistnospace,0,strlen($imgslistnospace)-1)."];\n";
-$html .= file_get_contents('end.html');
-$f = fopen('gallery'.$year.'.html','w');
+$jsfile = "var path = \"images/\";//var path = \"gallery".$year."/\";\n".substr($imgslist,0,strlen($imgslist)-1)."];\n".substr($imgslistnospace,0,strlen($imgslistnospace)-1)."];\n";
+//$html .= "<script>\nvar path = \"images/\";//var path = \"gallery".$year."/\";\n".substr($imgslist,0,strlen($imgslist)-1)."];\n".substr($imgslistnospace,0,strlen($imgslistnospace)-1)."];\n";
+$jsfile .= file_get_contents('end.html');//add the file contents to the variable
+//$html .= file_get_contents('end.html');//add the file contents to the variable
+$html .= '<script src="gallery'.$year.'.js"> </script></body></html>';
+$f = fopen('gallery'.$year.'.html','w');//html file
 fwrite($f,$html);
 fclose($f);
+$j = fopen('gallery'.$year.'.js','w');//js file
+fwrite($j,$jsfile);
+fclose($j);
 echo "Mission passed, <br /><a href=\"gallery".$year.".html\">View gallery</a>";}
 ?> 
 
