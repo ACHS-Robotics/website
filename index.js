@@ -79,3 +79,14 @@ navbarRight.addEventListener("click",(e)=>{
     toggleNavbarRight();
     extendedDown=!extendedDown;
 });
+
+var controller2 = new ScrollMagic.Controller();
+var parallax = new ScrollMagic.Scene({
+    triggerElement: ".parallax",
+    duration:"200%"
+})
+.setTween("#robot-background", {
+    backgroundPosition:"50% 120%",
+    ease: Linear.easeNone
+})
+.addTo(controller2);
