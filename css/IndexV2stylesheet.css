@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,600");
 @import url("https://fonts.googleapis.com/css?family=Major+Mono+Display");
-@import url("https://fonts.googleapis.com/css?family=Major+Mono+Display");
 * {
   margin: 0; }
 
@@ -17,8 +16,7 @@ header {
 
 nav {
   /*resizing is frustrating*/
-  min-width: 1536px;
-  max-height: 60px;
+  min-width: 100%;
   z-index: 5;
   display: flex;
   justify-content: space-between;
@@ -29,7 +27,6 @@ nav {
   background-color: #fafafa; }
 
 nav p {
-  margin-right: 25em;
   /*margin-left:150px;*/
   font-family: arial;
   color: black;
@@ -50,10 +47,10 @@ nav p {
   height: 100px; }
 
 #cam-logo-picture {
-  max-width: 120%;
-  max-height: 120%;
+  max-width: 90%;
+  max-height: 75%;
   position: relative;
-  bottom: 1em; }
+  bottom: .5em; }
 
 #name {
   font-family: 'Major Mono Display', monospace;
@@ -74,8 +71,9 @@ nav p {
 .memory-pulldown:hover {
   cursor: pointer; }
 
-.navbar-right {
-  min-width: 593.09px; }
+@media (max-width: 1199px) {
+  .navbar-right {
+    min-width: 768px; } }
 
 nav ul {
   float: right;
@@ -128,7 +126,7 @@ nav ul li ul li:hover a {
 
 /*footer stuff begins here*/
 footer {
-  height: 20vh;
+  height: 173px;
   background-color: black;
   font-size: 12px;
   font-family: 'Roboto', sans-serif; }
@@ -174,6 +172,10 @@ footer {
 .fa-chevron-circle-up:hover {
   color: #5861cc; }
 
+body {
+  font: 14px sans-serif;
+  text-align: center; }
+
 * {
   margin: 0; }
 
@@ -198,7 +200,7 @@ section {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background: url("../assets/2019bot.jpg");
+  background: url("../assets/2019botcompressed.jpg");
   background-size: cover; }
 
 .team-name {
@@ -206,7 +208,12 @@ section {
   font-size: 60px;
   font-family: "Josephin Sans", sans-serif; }
 
+@media (max-width: 1199px) {
+  .team-name {
+    font-size: 55px; } }
+
 #about {
+  height: 460px;
   background-color: #5861cc;
   display: flex;
   justify-content: flex-start; }
@@ -243,7 +250,15 @@ section {
 #regional {
   object-fit: contain; }
 
+@media (max-width: 1199px) {
+  .about-container h {
+    font-size: 55px; }
+  .about-container p {
+    margin: 50px 40px 50px 40px;
+    font-size: 18px; } }
+
 #FIRST {
+  height: 460px;
   display: flex;
   justify-content: flex-start; }
 
@@ -255,7 +270,6 @@ section {
 #firstlogo1 {
   padding-left: 100px;
   width: 100%;
-  height: 100%;
   object-fit: contain; }
 
 .first-container {
@@ -279,7 +293,15 @@ section {
   height: 0px;
   margin: 0 auto; }
 
+@media (max-width: 1199px) {
+  .first-container h {
+    font-size: 55px; }
+  .first-container p {
+    margin: 50px 40px 10px 80px;
+    font-size: 18px; } }
+
 #contact {
+  height: 460px;
   background-color: #5d5d91; }
 
 .contact-container {
@@ -301,6 +323,13 @@ section {
   font-size: 22px;
   padding: 50px 300px 25px 300px;
   text-align: justify; }
+
+@media (max-width: 1199px) {
+  .contact-container h {
+    font-size: 55px; }
+  .contact-container p {
+    padding: 50px 40px 10px 40px;
+    font-size: 22px; } }
 
 /* I stole these buttons...and go figure they don't use px so they are more scalable*/
 a.button1 {
