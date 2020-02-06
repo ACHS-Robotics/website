@@ -27,7 +27,6 @@ body{height:100%;
    background-size:cover;
 }
 div.pcontainer{
-  margin-bottom:5%;
     width:100%;
     height:1px;
     float:left;
@@ -36,7 +35,7 @@ div.pcontainer{
   font-size:200%;}
 div.person {
   font-family:Lucida Sans Unicode, Lucida Grande, sans-serif;
-  width: 46%;
+  width: 16%;
   background-color: #eee;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   margin:2%;
@@ -74,6 +73,7 @@ div.popup{
   overflow-y: scroll;
   max-height: 100%;
   display:none;
+  z-index:1000;
 }
 div.grayout{
   top:-10%;
@@ -81,6 +81,7 @@ div.grayout{
   position:fixed;
   left:-10%;
   display:none;
+  z-index:500;
 }
 </style>
 
@@ -95,7 +96,6 @@ div.grayout{
     <div class=team></div>
     <div class=about></div>
 </div>
-
 
   <div class=pcontainer>Faculty and Mentors</div><!-- pcontainer is what I use for heading the different sections-->
 <!-- you need an empty pcontainer div every 5 people so that if their text was different lengths the pcontainer makes all 5 of the next people start at the same height.-->
@@ -118,9 +118,6 @@ div.grayout{
         <div class=about>I am a senior, and am the co-president of the club. This is my third year on the team.</div>
     </div>
 
-
-    <div class=pcontainer></div>
-
     <div class=person onclick="show(this)"><img src="team/dak.jpg">
         <div class=name>Dakota Frost</div>
         <div class=team>Mechanical, Electrical</div>
@@ -133,14 +130,14 @@ div.grayout{
         <div class=about>I am a senior, and am co-leading the mechanical team with Freddy. This is my third year on the team. I am also treasurer.</div>
     </div>
 
-
-    <div class=pcontainer></div>
-
     <div class=person onclick="show(this)"><img src="team/Ewang.JPG">
         <div class=name>Edward Wang</div>
         <div class=team>Programming</div>
         <div class=about>Calcy, take it!</div>
     </div>
+
+
+    <div class=pcontainer></div>
 
     <div class=person onclick="show(this)"><img src="team/katelynr.jpg">
         <div class=name>Katelyn Raney</div>
@@ -148,9 +145,6 @@ div.grayout{
         <div class=about>I joined Robotics because I wanted a fun last two years of high school and to learn more about the math and engineering behind making robots!</div>
     </div>
 
-
-    <div class=pcontainer></div>
-
     <div class=person onclick="show(this)"><img src="team/PHOTO.jpg">
         <div class=name>Name</div>
         <div class=team>Teams</div>
@@ -162,9 +156,6 @@ div.grayout{
         <div class=team>Teams</div>
         <div class=about>about</div>
     </div>
-
-
-    <div class=pcontainer></div>
 
     <div class=person onclick="show(this)"><img src="team/PHOTO.jpg">
         <div class=name>Name</div>
@@ -189,14 +180,14 @@ div.grayout{
     </div>
 
 <script>
- if( !(navigator.userAgent.match(/Android/i)
+ if( navigator.userAgent.match(/Android/i)
  || navigator.userAgent.match(/webOS/i)
  || navigator.userAgent.match(/iPhone/i)
  || navigator.userAgent.match(/iPad/i)
  || navigator.userAgent.match(/iPod/i)
  || navigator.userAgent.match(/BlackBerry/i)
  || navigator.userAgent.match(/Windows Phone/i)
- )){location.href="team.html"}
+ ){location.href="team_mobile.html"}
 
     let gray=document.getElementById('grayout');
     let card=document.getElementById('maincard');

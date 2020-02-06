@@ -1,7 +1,7 @@
 <?php
 session_start();
  
-if(!(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true)){// make sure user is logged in
+if(!(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true && $_SESSION["delete_perm"] === true)){// make sure user is logged in
   header("location: login.php");
   exit;
 }

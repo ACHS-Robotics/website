@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>ACHSRobotics</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    
+<style>
+
+img {
+    width:100%;
+    transition: 0.25s;    
+}
+img:hover{
+    transition: border-radius ease 0.25s;
+    border-radius:0px;
+    transform: scale(1.0);
+}
+div.media {
+    margin: 1.35%;
+    border-radius: 20px;
+    float: left;
+    width: 30%; 
+}
+div.label {
+    margin: 1.35%;
+    border-radius: 20px;
+    float: left;
+    width: 30%; 
+}
+body{height:100%;
+   width:100%;
+   background-image:url(assets/2019bot.jpg);
+   background-repeat:no-repeat;
+   background-size:cover;
+}
+a {
+  font-family:Lucida Sans Unicode, Lucida Grande, sans-serif;
+  width: 16%;
+  background-color: white;
+  /*box-shadow: 20px 20px 20px 20px rgba(0, 0, 0, 0.92), 0 6px 20px 0 rgba(0, 0, 0, 0.919);*/
+  border-style: solid;
+  border-width:1%;
+  border-color:#000;
+  margin:1.6%;
+  float: left;
+  transition: 0.25s;
+  text-decoration: none;
+  color: rgb(0, 41, 55);
+}
+a:hover {
+    transform: scale(1.1);
+}
+
+div.text {
+  text-align: center;
+  padding: 10px 20px;
+}</style>
+
+</head>
+<body>
+    <a href="first.html">
+        <img src="assets/_firstlogo.png" alt="FIRST" style="width:100%">
+        <div class="text">
+        <p>What is FIRST?</p>
+        </div>
+    <a href="2020.html">
+        <img src="assets/_2020.png" alt="2020" style="width:100%">
+        <div class="text">
+        <p>What is this years challenge?</p>
+        </div>
+    <a href="team.html" id="team">
+        <img src="assets/_team.jpg" alt="team" style="width:100%">
+        <div class="text">
+        <p>Meet the team!</p>
+        </div>
+    <a href="gallery2019.html">
+        <img src="assets/_epicW.JPG" alt="2019" style="width:100%">
+        <div class="text">
+        <p>Look back at the 2019 season</p>
+        </div>
+    <a href="gallery2020.html">
+        <img src="assets/_2020team.jpg" alt="2020" style="width:100%">
+        <div class="text">
+        <p>See what we've done this year</p>
+        </div>
+
+
+<script>
+ if( navigator.userAgent.match(/Android/i)
+ || navigator.userAgent.match(/webOS/i)
+ || navigator.userAgent.match(/iPhone/i)
+ || navigator.userAgent.match(/iPad/i)
+ || navigator.userAgent.match(/iPod/i)
+ || navigator.userAgent.match(/BlackBerry/i)
+ || navigator.userAgent.match(/Windows Phone/i)
+ ){document.getElementById("team").href="team_mobile.html"}
+</script>
+</body>
+</html>

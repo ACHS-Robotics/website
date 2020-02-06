@@ -1,30 +1,41 @@
-<html><head>
-  <link rel="stylesheet" type="text/css" href="gallery_assets/gallery.css">
-  <link rel="stylesheet" href=IndexV2stylesheet.css>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="css/gallery2020.css">
+  <link rel="stylesheet" href="fontawesome-free-5.12.0-web/css/all.min.css">
+  <link rel="icon" type="image/png" href="http://achsrobotics.com/favicon.png">
 </head>
-<body>
-    <header>
-        <section id="robot-background">
-                <nav> 
-                            
-                            <p><a href="IndexV2.html" id="name"><i>TEAM 6934</i></a></p>
-                 
+<header>
+    <nav> 
+        <div class="navbar-left">
+            <div class="cam-logo">
+                <img src="assets/scorps-logo.webp" id="cam-logo-picture">
+            </div>
+            <p><a href="index.html" id="name" style="font-weight: 900"><i>scorps</i></a></p>
+        </div>                  
+        <div class="nav-container">
+                <ul class="navbar-right">
+                    <li><a href="2020Challenge.html"><i>THE CHALLENGE</i></a></li>
+                    <li><a href="2020Team.html"> <i>THE TEAM</i></a></li>
+                    <li>
+                        <div class="memory-pulldown">
+                        <a> 
+                        <i>MEMORIES</i>
+                        <i class="fas fa-chevron-down"></i>
+                        </a>
+                        </div>
                         <ul>
-                            <li><a href="2020.html"><i>THE CHALLENGE</i></a></li>
-                            <li><a href="team.html"> <i>THE TEAM</i></a></li>
-                            <li><a href="#"> <i>MEMORIES</i></a>
-                                <ul>
-                                    <li><a href="gallery2019.html"> <i>2019 Season</i></a></li>
-                                    <li><a href="gallery2020.html"> <i>2020 Season</i></a></li>
-                                </ul>
-                            </li>
-                            <li><a><i>SPONSORS</i></a></li>
-                           
+                            <li><a href="gallery2019.html"> <i>2019 Season</i></a></li>
+                            <li><a href="gallery2020.html"> <i>2020 Season</i></a></li>
                         </ul>
-                    </nav>
-    </section>
-    </header>
-    <h2>Gallery </h2>
+                    </li>
+                    <li><a href="#"><i>SPONSORS</i></a></li>
+                   
+                </ul>
+        </div>
+    </nav>
+</header>
+
+<body><h2>Gallery </h2>
 <div id="megaboi" class="megaboi"><img class="bigboi" src='gallery_assets/tl80.png'></div><!-- this is the gray semi-opaque background that appears when you click on an image-->
 <div id="bigboi" class="bigboi"><img id="bigboiimg" class="bigboi" src='gallery_assets/void.png'></div><!-- this is the div that becomes the large image youre looking at-->
 <div id="left" onclick="prev()" class="left"><img src='gallery_assets/previous.png'></div><!-- left arrow-->

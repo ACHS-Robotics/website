@@ -1,6 +1,40 @@
-<html><head>
-  <link rel="stylesheet" type="text/css" href="gallery_assets/gallery.css">
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="css/gallery2020.css">
+  <link rel="stylesheet" href="fontawesome-free-5.12.0-web/css/all.min.css">
+  <link rel="icon" type="image/png" href="http://achsrobotics.com/favicon.png">
 </head>
+<header>
+    <nav> 
+        <div class="navbar-left">
+            <div class="cam-logo">
+                <img src="assets/scorps-logo.webp" id="cam-logo-picture">
+            </div>
+            <p><a href="index.html" id="name" style="font-weight: 900"><i>scorps</i></a></p>
+        </div>                  
+        <div class="nav-container">
+                <ul class="navbar-right">
+                    <li><a href="2020Challenge.html"><i>THE CHALLENGE</i></a></li>
+                    <li><a href="2020Team.html"> <i>THE TEAM</i></a></li>
+                    <li>
+                        <div class="memory-pulldown">
+                        <a> 
+                        <i>MEMORIES</i>
+                        <i class="fas fa-chevron-down"></i>
+                        </a>
+                        </div>
+                        <ul>
+                            <li><a href="gallery2019.html"> <i>2019 Season</i></a></li>
+                            <li><a href="gallery2020.html"> <i>2020 Season</i></a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#"><i>SPONSORS</i></a></li>
+                   
+                </ul>
+        </div>
+    </nav>
+</header>
+
 <body><h2>Gallery </h2>
 <div id="megaboi" class="megaboi"><img class="bigboi" src='gallery_assets/tl80.png'></div><!-- this is the gray semi-opaque background that appears when you click on an image-->
 <div id="bigboi" class="bigboi"><img id="bigboiimg" class="bigboi" src='gallery_assets/void.png'></div><!-- this is the div that becomes the large image youre looking at-->
@@ -9,90 +43,87 @@
 <div id="close" onclick="close_()" class="close"><img src='gallery_assets/close.png'></div><!-- close button-->
 <div id="newtab" onclick="new_tab()" class="newtab"><img src='gallery_assets/newtab.png'></div><!-- open in new tab button-->
 
-<div class = "gallery_label">Dec 17 2019</div>
+<div class = "gallery_label">The Time for Building is Now</div>
+<div onclick="mediashow(this)" class="gallery_thin"><img src="images/2020 Jan 12_thumbs_square/DSC_4167.JPG"></div>
+<div onclick="mediashow(this)" class="gallery_wide"><img src="images/2020 Jan 12_thumbs/DSC_4159.JPG"></div>
+<div onclick="mediashow(this)" class="gallery_thin"><img src="images/2020 Jan 12_thumbs_square/DSC_4158.JPG"></div>
+<div onclick="mediashow(this)" class="gallery_wide"><img src="images/2020 Jan 12_thumbs/DSC_4151.JPG"></div>
+<div onclick="mediashow(this)" class="gallery_thin"><img src="images/2020 Jan 12_thumbs_square/DSC_4149.JPG"></div>
+<div onclick="mediashow(this)" class="gallery_wide"><img src="images/2020 Jan 12_thumbs/DSC_4145.JPG"></div>
+<div onclick="mediashow(this)" class="gallery_wide"><img src="images/2020 Jan 12_thumbs/DSC_4141.JPG"></div>
+<div onclick="mediashow(this)" class="gallery_wide"><img src="images/2020 Jan 12_thumbs/DSC_4137.JPG"></div>
+<div onclick="mediashow(this)" class="gallery_wide"><img src="images/2020 Jan 12_thumbs/DSC_4131.JPG"></div>
+<div onclick="mediashow(this)" class="gallery_thin"><img src="images/2020 Jan 12_thumbs_square/DSC_4124.JPG"></div>
+<div onclick="mediashow(this)" class="gallery_wide"><img src="images/2020 Jan 12_thumbs/DSC_4115.JPG"></div>
+<div onclick="mediashow(this)" class="gallery_thin"><img src="images/2020 Jan 12_thumbs_square/DSC_4113.JPG"></div>
+<div onclick="mediashow(this)" class="gallery_wide"><img src="images/2020 Jan 12_thumbs/DSC_4110.JPG"></div>
+<div onclick="mediashow(this)" class="gallery_thin"><img src="images/2020 Jan 12_thumbs_square/DSC_4108.JPG"></div>
+<div onclick="mediashow(this)" class="gallery_wide"><img src="images/2020 Jan 12_thumbs/DSC_4107.JPG"></div>
+<div onclick="mediashow(this)" class="gallery_wide"><img src="images/2020 Jan 12_thumbs/DSC_4105.JPG"></div>
+<div onclick="mediashow(this)" class="gallery_wide"><img src="images/2020 Jan 12_thumbs/DSC_4101.JPG"></div>
+<div onclick="mediashow(this)" class="gallery_wide"><img src="images/2020 Jan 12_thumbs/DSC_4098.JPG"></div>
+<div onclick="mediashow(this)" class="gallery_thin"><img src="images/2020 Jan 12_thumbs_square/DSC_4095.JPG"></div>
+<div onclick="mediashow(this)" class="gallery_wide"><img src="images/2020 Jan 12_thumbs/DSC_4090.JPG"></div>
+<div onclick="mediashow(this)" class="gallery_thin"><img src="images/2020 Jan 12_thumbs_square/DSC_4085.JPG"></div>
+<div onclick="mediashow(this)" class="gallery_wide"><img src="images/2020 Jan 12_thumbs/DSC_4080.JPG"></div>
+<div onclick="mediashow(this)" class="gallery_thin"><img src="images/2020 Jan 12_thumbs_square/DSC_4077.JPG"></div>
+<div onclick="mediashow(this)" class="gallery_wide"><img src="images/2020 Jan 12_thumbs/DSC_4076.JPG"></div>
 
-<div class = "gallery_label">Filler Image</div>
-<div onclick="mediashow(this)" class="gallery_thin"><img src="images/2019 Dec 18_thumbs_square/IMG_4138.JPG"></div>
-<script>
-var path = "images/";//var path = "gallery2020/";
-var imgs = ["2019 Dec 18/IMG_4138.JPG"];
-var imgsns = ["2019%20Dec%2018/IMG_4138.JPG"];
-let bigboi = document.getElementById("bigboi");
-let bigboiimg = document.getElementById("bigboiimg");
-let megaboi = document.getElementById("megaboi");
-let left = document.getElementById("left");
-let right = document.getElementById("right");
-let close = document.getElementById("close");
-let newtab = document.getElementById("newtab");
-let showing=false;
-close_();
+<div class = "gallery_label">Week 2-4</div>
+<div onclick="mediashow(this)" class="gallery_thin"><img src="images/2020 Feb 5_thumbs_square/IMG_0574.JPG"></div>
+<div onclick="mediashow(this)" class="gallery_wide"><img src="images/2020 Feb 5_thumbs/IMG_0600.JPG"></div>
+<div onclick="mediashow(this)" class="gallery_thin"><img src="images/2020 Feb 5_thumbs_square/IMG_0578.JPG"></div>
+<div onclick="mediashow(this)" class="gallery_wide"><img src="images/2020 Feb 5_thumbs/IMG_0583.JPG"></div>
+<div onclick="mediashow(this)" class="gallery_thin"><img src="images/2020 Feb 5_thumbs_square/IMG_0586.JPG"></div>
+<div onclick="mediashow(this)" class="gallery_wide"><img src="images/2020 Feb 5_thumbs/IMG_0594.JPG"></div>
+<div onclick="mediashow(this)" class="gallery_wide"><img src="images/2020 Feb 5_thumbs/IMG_0597.JPG"></div>
 
+<div class = "gallery_label">Weeks 5-7</div>
+<div onclick="mediashow(this)" class="gallery_thin"><img src="images/2020 Feb 5_1_thumbs_square/IMG_0296.JPG"></div>
+<div onclick="mediashow(this)" class="gallery_wide"><img src="images/2020 Feb 5_1_thumbs/IMG_0132.JPG"></div>
+<div onclick="mediashow(this)" class="gallery_thin"><img src="images/2020 Feb 5_1_thumbs_square/IMG_0295.JPG"></div>
+<div onclick="mediashow(this)" class="gallery_wide"><img src="images/2020 Feb 5_1_thumbs/IMG_0159.JPG"></div>
+<div onclick="mediashow(this)" class="gallery_thin"><img src="images/2020 Feb 5_1_thumbs_square/IMG_0161.JPG"></div>
+<div onclick="mediashow(this)" class="gallery_wide"><img src="images/2020 Feb 5_1_thumbs/IMG_0162.JPG"></div>
+<div onclick="mediashow(this)" class="gallery_wide"><img src="images/2020 Feb 5_1_thumbs/IMG_0165.JPG"></div>
+<div onclick="mediashow(this)" class="gallery_wide"><img src="images/2020 Feb 5_1_thumbs/IMG_0293.JPG"></div>
+<div onclick="mediashow(this)" class="gallery_wide"><img src="images/2020 Feb 5_1_thumbs/IMG_0344.JPG"></div>
+<div onclick="mediashow(this)" class="gallery_thin"><img src="images/2020 Feb 5_1_thumbs_square/IMG_0330.JPG"></div>
+<div onclick="mediashow(this)" class="gallery_wide"><img src="images/2020 Feb 5_1_thumbs/IMG_0346.JPG"></div>
+<div onclick="mediashow(this)" class="gallery_thin"><img src="images/2020 Feb 5_1_thumbs_square/IMG_0390.JPG"></div>
+<div onclick="mediashow(this)" class="gallery_wide"><img src="images/2020 Feb 5_1_thumbs/IMG_0564.JPG"></div>
+<div onclick="mediashow(this)" class="gallery_thin"><img src="images/2020 Feb 5_1_thumbs_square/IMG_0567.JPG"></div>
+<div onclick="mediashow(this)" class="gallery_wide"><img src="images/2020 Feb 5_1_thumbs/IMG_0570.JPG"></div>
+<div onclick="mediashow(this)" class="gallery_wide"><img src="images/2020 Feb 5_1_thumbs/IMG_0504.JPG"></div>
+<div onclick="mediashow(this)" class="gallery_wide"><img src="images/2020 Feb 5_1_thumbs/IMG_0551.JPG"></div>
+<div onclick="mediashow(this)" class="gallery_wide"><img src="images/2020 Feb 5_1_thumbs/IMG_0249.JPG"></div>
+<div onclick="mediashow(this)" class="gallery_thin"><img src="images/2020 Feb 5_1_thumbs_square/IMG_0272.JPG"></div>
+<div onclick="mediashow(this)" class="gallery_wide"><img src="images/2020 Feb 5_1_thumbs/IMG_0354.JPG"></div>
+<div onclick="mediashow(this)" class="gallery_thin"><img src="images/2020 Feb 5_1_thumbs_square/IMG_0404.JPG"></div>
+<div onclick="mediashow(this)" class="gallery_wide"><img src="images/2020 Feb 5_1_thumbs/IMG_0424.JPG"></div>
+<div onclick="mediashow(this)" class="gallery_thin"><img src="images/2020 Feb 5_1_thumbs_square/IMG_0452.JPG"></div>
+<div onclick="mediashow(this)" class="gallery_wide"><img src="images/2020 Feb 5_1_thumbs/IMG_0528.JPG"></div>
+<div onclick="mediashow(this)" class="gallery_wide"><img src="images/2020 Feb 5_1_thumbs/IMG_0556.JPG"></div>
+<div onclick="mediashow(this)" class="gallery_wide"><img src="images/2020 Feb 5_1_thumbs/IMG_0562.JPG"></div>
+<div onclick="mediashow(this)" class="gallery_wide"><img src="images/2020 Feb 5_1_thumbs/IMG_0557.JPG"></div>
 
-let file;//image src
-function mediashow(div){
-    div.children[0].style.zIndex=0;
-    bigboiimg.src = div.children[0].src.replace('_square','');
-    bigboiimg.src = div.children[0].src.replace('_thumbs','').replace('_square','');
-    bigboi.style.display='block'
-    megaboi.style.display='block';
-    left.style.display='block'
-    right.style.display='block';
-    close.style.display='block'
-    newtab.style.display='block';
-    showing=true;
-}
-
-document.onkeydown = function(evt) {
-    evt = evt || window.event;
-    if (evt.keyCode == 27) {
-        close_();
-    }
-};
-function prev(){
-    var fn = bigboiimg.src.split('/');
-    var ffn = fn[fn.length-2]+'/'+fn[fn.length-1];
-    var pos = imgsns.indexOf(ffn);
-    if (pos > 0){
-        bigboiimg.src = path+imgsns[pos-1];
-    }
-}
-function next(){
-    var fn = bigboiimg.src.split('/');
-    var ffn = fn[fn.length-2]+'/'+fn[fn.length-1];
-    var pos = imgsns.indexOf(ffn);
-    if (pos < imgs.length-1){
-        bigboiimg.src = path+imgsns[pos+1];
-    }
-}
-function new_tab(){
-    window.open(bigboiimg.src,'_blank');
-}
-function close_(){
-    bigboi.style.display='none'
-    megaboi.style.display='none';
-    left.style.display='none'
-    right.style.display='none';
-    close.style.display='none'
-    newtab.style.display='none';
-    showing=false;
-}
-megaboi.onclick = function(e){
-    if (showing && e.target != bigboi && e.target != left && e.target != right && e.target != newtab && e.target != close){
-      close_();
-    }
-  }
-document.onkeydown = function(e) {
-  if(showing){
-    if(e.key === "Escape") {
-        close_();
-    }
-    if(e.key === "ArrowRight"){
-        next();
-    }
-    if(e.key === "ArrowLeft"){
-        prev();
-    }
-  }
-}
-</script>
-</body></html>
+<div class = "gallery_label">Week 1</div>
+<div onclick="mediashow(this)" class="gallery_thin"><img src="images/2020 Jan 4_1_thumbs_square/DSC_4071.JPG"></div>
+<div onclick="mediashow(this)" class="gallery_wide"><img src="images/2020 Jan 4_1_thumbs/DSC_4066.JPG"></div>
+<div onclick="mediashow(this)" class="gallery_thin"><img src="images/2020 Jan 4_1_thumbs_square/DSC_4064.JPG"></div>
+<div onclick="mediashow(this)" class="gallery_wide"><img src="images/2020 Jan 4_1_thumbs/DSC_4062.JPG"></div>
+<div onclick="mediashow(this)" class="gallery_thin"><img src="images/2020 Jan 4_1_thumbs_square/DSC_4059.JPG"></div>
+<div onclick="mediashow(this)" class="gallery_wide"><img src="images/2020 Jan 4_1_thumbs/DSC_4057.JPG"></div>
+<div onclick="mediashow(this)" class="gallery_wide"><img src="images/2020 Jan 4_1_thumbs/DSC_4051.JPG"></div>
+<div onclick="mediashow(this)" class="gallery_wide"><img src="images/2020 Jan 4_1_thumbs/DSC_4050.JPG"></div>
+<div onclick="mediashow(this)" class="gallery_wide"><img src="images/2020 Jan 4_1_thumbs/DSC_4047.JPG"></div>
+<div onclick="mediashow(this)" class="gallery_thin"><img src="images/2020 Jan 4_1_thumbs_square/DSC_4043.JPG"></div>
+<div onclick="mediashow(this)" class="gallery_wide"><img src="images/2020 Jan 4_1_thumbs/DSC_4042.JPG"></div>
+<div onclick="mediashow(this)" class="gallery_thin"><img src="images/2020 Jan 4_1_thumbs_square/DSC_4034.JPG"></div>
+<div onclick="mediashow(this)" class="gallery_wide"><img src="images/2020 Jan 4_1_thumbs/DSC_4033.JPG"></div>
+<div onclick="mediashow(this)" class="gallery_thin"><img src="images/2020 Jan 4_1_thumbs_square/DSC_4031.JPG"></div>
+<div onclick="mediashow(this)" class="gallery_wide"><img src="images/2020 Jan 4_1_thumbs/DSC_4030.JPG"></div>
+<div onclick="mediashow(this)" class="gallery_wide"><img src="images/2020 Jan 4_1_thumbs/DSC_4029.JPG"></div>
+<div onclick="mediashow(this)" class="gallery_wide"><img src="images/2020 Jan 4_1_thumbs/DSC_4028.JPG"></div>
+<div onclick="mediashow(this)" class="gallery_wide"><img src="images/2020 Jan 4_1_thumbs/DSC_4027.JPG"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.2/gsap.min.js"></script><script src="gallery2020.js"> </script></body></html>

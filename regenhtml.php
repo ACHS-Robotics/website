@@ -12,7 +12,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $year = trim($_POST["year"]);
     }
 $html = file_get_contents('start.html');//this is the html "code" that will be written to the file. start.html contains some one time stuff like <head> and css
-$imgslist = "var imgs = [";
+//$imgslist = "var imgs = [";
 $imgslistnospace = "var imgsns = [";// spaghetti? sorry i dont speak italian
 $cycle = ["gallery_thin","gallery_wide","gallery_thin","gallery_wide","gallery_thin","gallery_wide","gallery_wide","gallery_wide","gallery_wide"];// css cycle
 $cycle2 = ["_thumbs_square","_thumbs","_thumbs_square","_thumbs","_thumbs_square","_thumbs","_thumbs","_thumbs","_thumbs"];// filename cycle. these cycles give the page the square/8:5 structure
@@ -29,7 +29,7 @@ if ($handle = opendir('imgAliases/'.$year)) {
 //                        $html .= "<div onclick=\"mediashow('".$entry."/".$entry2."')\" class=\"".$cycle[$c]."\"><img src=\"images/".$entry.$cycle2[$c]."/".$entry2."\"></div>\n";
                         $html .= "<div onclick=\"mediashow(this)\" class=\"".$cycle[$c]."\"><img src=\"images/".$entry.$cycle2[$c]."/".$entry2."\"></div>\n";
                         $imgslistnospace .= str_replace(' ','%20',"\"".$entry.'/'.$entry2.'",');
-                        $imgslist .= "\"".$entry.'/'.$entry2.'",';
+//                        $imgslist .= "\"".$entry.'/'.$entry2.'",';
                         $c = ($c+1)%count($cycle);
                                 
                     }
@@ -40,11 +40,12 @@ if ($handle = opendir('imgAliases/'.$year)) {
     }
     closedir($handle);
 }
-$jsfile = "var path = \"images/\";//var path = \"gallery".$year."/\";\n".substr($imgslist,0,strlen($imgslist)-1)."];\n".substr($imgslistnospace,0,strlen($imgslistnospace)-1)."];\n";
+//$jsfile = "var path = \"images/\";//var path = \"gallery".$year."/\";\n".substr($imgslist,0,strlen($imgslist)-1)."];\n".substr($imgslistnospace,0,strlen($imgslistnospace)-1)."];\n";
+$jsfile = "var path = \"images/\";//var path = \"gallery".$year."/\";\n".substr($imgslistnospace,0,strlen($imgslistnospace)-1)."];\n";
 //$html .= "<script>\nvar path = \"images/\";//var path = \"gallery".$year."/\";\n".substr($imgslist,0,strlen($imgslist)-1)."];\n".substr($imgslistnospace,0,strlen($imgslistnospace)-1)."];\n";
 $jsfile .= file_get_contents('end.html');//add the file contents to the variable
 //$html .= file_get_contents('end.html');//add the file contents to the variable
-$html .= '<script src="gallery'.$year.'.js"> </script></body></html>';
+$html .= '<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.2/gsap.min.js"></script><script src="gallery'.$year.'.js"> </script></body></html>';
 $f = fopen('gallery'.$year.'.html','w');//html file
 fwrite($f,$html);
 fclose($f);

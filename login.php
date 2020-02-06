@@ -31,10 +31,16 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     
     // Validate credentials
     if(empty($username_err) && empty($password_err)){
-        if ($username==="uname"&& $password==="pword"){//can you imagine using an actual database 
+        if ($username==="6934admin"&& $password==="!Jackson"){//can you imagine using an actual database 
             session_start();
             $_SESSION["loggedin"] = true;
-            header("location: admin.php");
+            $_SESSION["delete_perm"] = true;
+            header("location: epic.php");
+        } else if ($username==="6934"&& $password==="scorpion6934"){//can you imagine using an actual database 
+            session_start();
+            $_SESSION["loggedin"] = true;
+            $_SESSION["delete_perm"] = false;
+            header("location: epic.php");
         } else{
             $password_err = "The password you entered was not valid.";
         }
