@@ -18,4 +18,5 @@ Progress Bar
 Cookie for site views (or just something that tracks site views)
 Insta feed. 
 Footer shows achsrobotics or something
+Minify CSS and HTML
 Comment and Document
