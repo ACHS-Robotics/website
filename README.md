@@ -3,6 +3,7 @@ This repository hosts team 6934's website code. To see the website live, please 
 
 
 ## TODO
+- Change the descriptions and titles for search engines
 - Add lazy loading
 - Mobile formatting
 - Sponsors Page
