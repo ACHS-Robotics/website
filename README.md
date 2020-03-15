@@ -5,7 +5,7 @@ This repository hosts team 6934's website code. To see the website live, please 
 ## TODO
 - Change the descriptions and titles for search engines
 - Add lazy loading
-- Mobile formatting ✓
+- Mobile formatting 
 - Sponsors Page
 - Use a beter picture on the About Us
 - Change Error 404 animation speed
